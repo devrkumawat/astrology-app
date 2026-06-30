@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap');
+@import "tailwindcss";
+:root {
+  --space-dark: #10061e; 
+  --cosmic-purple: #2c1b4d; 
+  --nebula-light: #483273;
+  --starlight: #ffffff;
+  --gold: #d4af37;
+  --glass-bg: rgba(44, 27, 77, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--starlight);
+  /* Cosmic Background Gradient */
+  background: radial-gradient(circle at top right, var(--nebula-light), transparent 50%),
+              radial-gradient(circle at bottom left, var(--cosmic-purple), transparent 50%),
+              var(--space-dark);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  color: var(--starlight);
+  letter-spacing: 1px;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.header p {
+  color: #b3a0d6;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Glassmorphism Form */
+.astro-form {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 400;
+  color: #d1c4e9;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.input-group input {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--starlight);
+  padding: 0.85rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Match the outline button from your image */
+.submit-btn {
+  background: transparent;
+  color: var(--starlight);
+  border: 1px solid var(--starlight);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px; /* Pill shape like the image */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: var(--starlight);
+  color: var(--space-dark);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Results Section */
+.results-container {
+  margin-top: 3rem;
+  padding: 3rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.numerology-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  color: #b3a0d6;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge span {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  margin-top: 0.5rem;
+}
+
+.reading-content h1, 
+.reading-content h2, 
+.reading-content h3 {
+  color: var(--gold);
+  margin-top: 2.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.reading-content p, 
+.reading-content li {
+  line-height: 1.8;
+  color: #e0d4f5;
+}
+
+.loading {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
