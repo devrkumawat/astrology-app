@@ -11,9 +11,9 @@ const PORT = process.env.PORT || 5000;
 
 // 🛑 SECURITY UPDATE: Restrict access to your frontend
 const allowedOrigins = [
-  'https://your-frontend-name.vercel.app', // <-- Replace with your actual Vercel URL
-  'http://localhost:5173',                 // For local Vite testing
-  'http://localhost:3000'                  // For local CRA testing
+  'https://nakshatra.vercel.app', 
+  'http://localhost:5173',               
+  'http://localhost:3000'              
 ];
 
 app.use(cors({
