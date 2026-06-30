@@ -25,7 +25,6 @@ function App() {
     setResult(null);
 
     try {
-      // 🚀 DEPLOYMENT UPDATE: Use Environment Variable for the API URL
       const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
       
       const response = await fetch(`${BACKEND_URL}/api/astrology/generate`, {

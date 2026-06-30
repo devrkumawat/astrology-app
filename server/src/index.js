@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 // 🛑 SECURITY UPDATE: Restrict access to your frontend
 // 🛑 IMPORTANT: Do NOT put a slash (/) at the very end of the Vercel URL
 const allowedOrigins = [
-  'https://nakshatra-by-dev.vercel.app', 
+  process.env.FRONTEND_PRODUCTION_URL, 
   'http://localhost:5173',                 
   'http://localhost:3000'                  
 ];
