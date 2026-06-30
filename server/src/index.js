@@ -10,10 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // 🛑 SECURITY UPDATE: Restrict access to your frontend
+// 🛑 IMPORTANT: Do NOT put a slash (/) at the very end of the Vercel URL
 const allowedOrigins = [
-  'https://nakshatra.vercel.app', 
-  'http://localhost:5173',               
-  'http://localhost:3000'              
+  'https://nakshatra-by-dev.vercel.app', 
+  'http://localhost:5173',                 
+  'http://localhost:3000'                  
 ];
 
 app.use(cors({
